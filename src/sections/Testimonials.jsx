@@ -1,12 +1,17 @@
 import { motion } from 'framer-motion'
 import { FaStar, FaQuoteRight } from 'react-icons/fa'
 import SectionHeading from '../components/SectionHeading'
+import SectionBg from '../components/SectionBg'
 import { testimonials } from '../data/site'
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="section-pad">
-      <div className="container-page">
+    <section
+      id="testimonials"
+      className="section-pad relative isolate overflow-hidden bg-base-950"
+    >
+      <SectionBg img="./images/gym-7.jpg" />
+      <div className="container-page relative z-10">
         <SectionHeading
           eyebrow="Success Stories"
           title="What Our Members Say"

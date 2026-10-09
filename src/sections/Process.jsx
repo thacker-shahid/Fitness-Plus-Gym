@@ -1,14 +1,19 @@
 import { motion } from 'framer-motion'
 import { FaClipboardCheck, FaDumbbell, FaChartLine, FaTrophy } from 'react-icons/fa'
 import SectionHeading from '../components/SectionHeading'
+import SectionBg from '../components/SectionBg'
 import { process } from '../data/site'
 
 const icons = [FaClipboardCheck, FaDumbbell, FaChartLine, FaTrophy]
 
 export default function Process() {
   return (
-    <section id="process" className="section-pad bg-base-900/50">
-      <div className="container-page">
+    <section
+      id="process"
+      className="section-pad relative isolate overflow-hidden bg-base-950"
+    >
+      <SectionBg img="./images/gym-8.jpg" />
+      <div className="container-page relative z-10">
         <SectionHeading
           eyebrow="How It Works"
           title="Our Process"

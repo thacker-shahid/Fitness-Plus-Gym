@@ -87,7 +87,7 @@ export default function Hero() {
             className="mt-12 flex flex-wrap gap-8"
           >
             {[
-              { k: '1000+', v: 'Members' },
+              { k: '2000+', v: 'Members' },
               { k: '5+', v: 'Trainers' },
               { k: '50+', v: 'Equipments' },
             ].map((s) => (

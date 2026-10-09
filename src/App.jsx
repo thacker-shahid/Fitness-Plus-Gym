@@ -7,7 +7,6 @@ import InstallPWA from './components/InstallPWA'
 import Hero from './sections/Hero'
 import Gallery from './sections/Gallery'
 import Process from './sections/Process'
-import Trainers from './sections/Trainers'
 import Testimonials from './sections/Testimonials'
 import Counters from './sections/Counters'
 import Pricing from './sections/Pricing'
@@ -25,7 +24,6 @@ export default function App() {
         <Hero />
         <Gallery />
         <Process />
-        <Trainers />
         <Testimonials />
         <Counters />
         <Pricing />

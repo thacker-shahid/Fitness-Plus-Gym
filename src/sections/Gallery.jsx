@@ -1,16 +1,20 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiX } from 'react-icons/hi'
-import { FaVideo, FaPlay } from 'react-icons/fa'
 import SectionHeading from '../components/SectionHeading'
+import SectionBg from '../components/SectionBg'
 import { gallery } from '../data/site'
 
 export default function Gallery() {
   const [active, setActive] = useState(null)
 
   return (
-    <section id="gallery" className="section-pad">
-      <div className="container-page">
+    <section
+      id="gallery"
+      className="section-pad relative isolate overflow-hidden bg-base-950"
+    >
+      <SectionBg img="./images/gym-6.jpg" opacity="opacity-[0.18]" />
+      <div className="container-page relative z-10">
         <SectionHeading
           eyebrow="Our Space"
           title="Gallery"
@@ -44,33 +48,6 @@ export default function Gallery() {
           ))}
         </div>
 
-        {/* Videos — coming soon placeholder */}
-        <div className="mt-14">
-          <h3 className="mb-6 flex items-center gap-3 font-display text-xl font-bold uppercase tracking-wide text-white">
-            <FaVideo className="text-accent" /> Gym Videos
-          </h3>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {[1, 2, 3].map((n) => (
-              <motion.div
-                key={n}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: n * 0.08 }}
-                className="card group relative flex aspect-video items-center justify-center overflow-hidden"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-base-900" />
-                <div className="relative flex flex-col items-center gap-3 text-center">
-                  <span className="grid h-14 w-14 place-items-center rounded-full bg-accent/20 text-accent-light animate-pulse-glow">
-                    <FaPlay />
-                  </span>
-                  <p className="font-semibold text-white">Coming Soon</p>
-                  <p className="text-xs text-gray-400">Video tour in production</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
       </div>
 
       {/* Lightbox */}
